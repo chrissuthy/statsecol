@@ -4,7 +4,7 @@
 \title{
 Great tit goodness-of-fit output}
 \description{
-The goodness-of-fit output from \code{N.mix.gof()} for the top model from the great tit analysis in the N-mixture practiccal.}
+The goodness-of-fit output from \code{N.mix.gof()} for the top model from the great tit analysis in the N-mixture practiccal.
 }
 \usage{data("titgof")}
 \format{
