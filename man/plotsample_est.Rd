@@ -67,6 +67,6 @@ four possible methods (see argument \code{method}.)
 }
 
 \examples{
-plotsamp_est(n=10, p=0.5, method='lognormal')
+plotsample_est(n=10, p=0.5, method='lognormal')
 }
 
