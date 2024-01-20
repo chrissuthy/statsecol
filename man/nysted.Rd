@@ -20,7 +20,7 @@ Rødsand II built in 2010).
     \item{\code{Year}}{Year observation was made (e.g., \eqn{2000, 2005, 2007}).}
     \item{\code{Month}}{Month observation was made (\eqn{1, 2, 3, 4}).}
     \item{\code{Day}}{Day of the month the observation was made (\eqn{1,2,\ldots,31}).}
-    \item{\code{YearMonth}}{Concatanated year and month of observation (e.g., \eqn{2000/1} is January 2000)}
+    \item{\code{YearMonth}}{Concatanated year and month of observation (e.g., \eqn{2000/1} is January 2000).}
     \item{\code{XPos}}{X coordinate in UTM projection (metres).}
     \item{\code{YPos}}{Y coordinate in UTM projection (metres).}
     \item{\code{TransectID}}{Unique transect ID (character).}
