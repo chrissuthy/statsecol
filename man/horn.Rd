@@ -21,7 +21,7 @@ Data collected to assess the environmental impact of the offshore wind farm Horn
     \item{\code{Area}}{Observation area for each count (km2).}
     \item{\code{Nhat}}{Estimated scoter abundance from distance sampling (response).}
     \item{\code{YearMonth}}{Concatanated year and month of observation (e.g., \eqn{200511} is November 2005).}
-    \item{\code{Impact}}{Binary variable indicating whether estimate is from before (0) of after (1) the wind farm was built.}
+    \item{\code{Impact}}{Factor indicating whether estimate is from before (\code{pre}) of after (\code{post}) the wind farm was built.}
   }
 }
 \details{
