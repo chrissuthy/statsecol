@@ -2,10 +2,10 @@
 \alias{tobinsq}
 \docType{data}
 \title{
-%%   ~~ data name/kind ... ~~
+Tobin’s Q data
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of the dataset. ~~
+This 25 year data set, collected from 1240 US companies. The data contains Tobin’s Q values along with corresponding covariates from the US-based companies across 41 industry classes.
 }
 \usage{data("tobinsq")}
 \format{
@@ -44,6 +44,6 @@
 }
 \examples{
 data(tobinsq)
-## maybe str(tobinsq) ; plot(tobinsq) ...
+str(tobinsq)
 }
 \keyword{datasets}
