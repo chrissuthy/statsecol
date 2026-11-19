@@ -48,6 +48,8 @@
 #'
 #' * [plotsample_est()]: abundance estimation from plot counts.
 #' * [norm.ci()], [lognorm.ci()]: normal and lognormal confidence intervals.
+#' * [simulate_dynocc()]: simulate detection/non-detection data from a
+#'   dynamic occupancy model, seeded by student ID (MT5767 Project 3).
 #'
 #' @importFrom stats pbinom ppois qnorm quantile var
 #' @keywords internal

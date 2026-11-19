@@ -62,6 +62,8 @@ two-session ocelot camera trap data.
 \itemize{
 \item \code{\link[=plotsample_est]{plotsample_est()}}: abundance estimation from plot counts.
 \item \code{\link[=norm.ci]{norm.ci()}}, \code{\link[=lognorm.ci]{lognorm.ci()}}: normal and lognormal confidence intervals.
+\item \code{\link[=simulate_dynocc]{simulate_dynocc()}}: simulate detection/non-detection data from a
+dynamic occupancy model, seeded by student ID (MT5767 Project 3).
 }
 }
 

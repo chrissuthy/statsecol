@@ -1,3 +1,11 @@
+# statsecol 0.2.1
+
+* New function `simulate_dynocc()`: simulates detection/non-detection data
+  from a non-spatial dynamic occupancy model, using a student ID as the seed,
+  and prints the study design and the data generating values. Used in MT5767
+  Project 3. Do not change its random draws once a project using it has been
+  released, because that changes every student's data.
+
 # statsecol 0.2.0
 
 Documentation audit. No data set has been changed.

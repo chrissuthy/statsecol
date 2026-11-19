@@ -1,7 +1,7 @@
 Package: statsecol
 Type: Package
 Title: Data and Functions for the Statistical Ecology MSc
-Version: 0.2.0
+Version: 0.2.1
 Authors@R: c(
     person("Chris", "Sutherland", email = "css6@st-andrews.ac.uk",
            role = c("aut", "cre")),
