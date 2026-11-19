@@ -1,0 +1,69 @@
+\name{simulate_dynocc}
+\alias{simulate_dynocc}
+\title{Simulate data from a dynamic occupancy model}
+\description{
+Simulates detection/non-detection data from a (non-spatial) dynamic occupancy
+model with constant colonisation, extinction and detection probabilities. The
+student ID is used as the random seed, so the same ID always returns the same
+data, and different IDs return different study designs and different data
+generating values. The study design and
+the data generating values are printed when the function is run. Used in MT5767
+Project 3.
+}
+\usage{
+simulate_dynocc(student_id)
+}
+\arguments{
+\item{student_id}{A matriculation number (e.g. \code{220012345}), given as a
+number or a character string. It is used as the random seed.}
+}
+\details{
+The study design is drawn first: the number of sites (80 to 140, in steps of
+10), the number of seasons (8 to 12) and the number of repeat visits per season
+(3 or 4). The four data generating values are then drawn from normal
+distributions on the logit scale and rounded to two decimal places: occupancy in
+the first season (centred on 0.50, sd 0.80), colonisation probability (0.20, sd
+0.45), extinction probability (0.20, sd 0.45) and detection probability per
+visit (0.45, sd 0.25).
+
+The true occupancy state of site \eqn{i} in season \eqn{t} is
+\deqn{z_{i,1} \sim \mbox{Bernoulli}(\psi_1),}
+\deqn{z_{i,t} \sim \mbox{Bernoulli}(z_{i,t-1}(1-\epsilon) + (1-z_{i,t-1})\gamma), \quad t > 1,}
+and the detection on visit \eqn{j} is
+\deqn{y_{i,j,t} \sim \mbox{Bernoulli}(z_{i,t}\,p).}
+
+So that the same ID gives the same data on every computer, the function sets the
+random number generators with \code{RNGkind("Mersenne-Twister", "Inversion",
+"Rejection")} before calling \code{set.seed}. Both changes persist after the
+function returns.
+}
+\value{
+Prints the study design and the data generating values, and (invisibly) returns
+a list with the following elements:
+\describe{
+ \item{\code{student_id}}{The ID used as the seed.}
+ \item{\code{y}}{The detections (1 = detected, 0 = not detected), as an array
+ with dimensions site x visit x season.}
+ \item{\code{design}}{A named vector with \code{n_sites}, \code{n_seasons} and
+ \code{n_visits}.}
+ \item{\code{truth}}{A list with \code{parameters} (the values of \code{psi1},
+ \code{gamma}, \code{epsilon} and \code{p} that generated the data) and
+ \code{prop_occupied} (the proportion of sites truly occupied in each season).}
+}
+}
+\author{
+Chris Sutherland
+}
+\examples{
+# prints the study design and the data generating values
+dat <- simulate_dynocc(220012345)
+
+# detection histories for the first five sites in season 1
+dat$y[1:5, , 1]
+
+# naive occupancy: proportion of sites with at least one detection per season
+colMeans(apply(dat$y, c(1, 3), max))
+
+# the data generating values
+dat$truth
+}
